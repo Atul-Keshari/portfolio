@@ -1,0 +1,90 @@
+@import "../../_globalColor";
+
+.coding-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.coding-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: $lightBackground1;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 282px;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.profile-logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;  // Circular Logo
+  border: 3px solid $buttonColor;
+  background: white;
+  object-fit: contain;
+  background-color: white;
+}
+
+.platform-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: $textColor;
+}
+
+.profile-info {
+  font-size: 1rem;
+  color: $cardSubtitle;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+  }
+}
+
+.profile-rating {
+  font-weight: bold;
+  font-size: 1rem;
+  color: $buttonColor;
+}
+
+.profile-link {
+  font-size: 1rem;
+  color: $buttonColor;
+  margin-top: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Dark Mode */
+.dark-mode .coding-profile-card {
+  background: $darkBackground;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .coding-profile-card:hover {
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .platform-title,
+.dark-mode .profile-info p,
+.dark-mode .profile-link {
+  color: $textColorDark;
+}

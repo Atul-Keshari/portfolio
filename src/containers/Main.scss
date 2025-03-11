@@ -1,0 +1,43 @@
+@import "../_globalColor";
+
+.dark-mode {
+  background-color: $darkBackground;
+  color: white;
+  transition: "0.1s";
+}
+/* Container for the coding profile section */
+.experience-container {
+  display: flex;
+  width: 90%;
+  padding: 20px 10px;
+  margin: 0px auto;
+  margin-top: 2rem;
+  flex-direction: column; /* Stack heading and container vertically */
+}
+
+/* Heading style */
+.dark-mode .coding-profile-heading {
+  font-size: 47px;
+  font-weight: 400;
+  color: white; /* Or your dark mode color */
+  margin-bottom: 60px;
+  text-align: left; /* Align the heading to the left */
+}
+.coding-profile-heading {
+  font-size: 47px;
+  font-weight: 400;
+  color: black; /* Or your dark mode color */
+  margin-bottom: 60px;
+  text-align: left; /* Align the heading to the left */
+}
+
+/* Flex container for the coding profile cards */
+.coding-profile-cards-container {
+  display: flex;
+  width: 100%;
+  gap: 20px; /* Space between cards */
+  justify-content: start; /* Align cards to the start */
+  flex-wrap: wrap; 
+}
+
+

@@ -1,0 +1,84 @@
+@import "../../_globalColor";
+
+.por-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.por-header {
+  text-align: left;
+  margin-bottom: 20px;
+  
+}
+
+.por-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates multiple columns */
+  gap: 20px;
+  width: 100%;
+}
+
+.por-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 10px;
+  background: $lightBackground1;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.por-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.por-icon {
+  font-size: 2rem;
+  color: $buttonColor;
+  margin-right: 15px;
+}
+
+.por-text {
+  flex: 1;
+}
+
+.por-text h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $textColor;
+  margin-bottom: 5px;
+}
+
+.por-text p {
+  font-size: 1rem;
+  color: $cardSubtitle;
+  margin-bottom: 5px;
+}
+
+.por-skills {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: $buttonColor;
+}
+
+/* Dark Mode */
+.dark-mode .por-item {
+  background: $darkBackground;
+  box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .por-item:hover {
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .por-icon {
+  color: lighten($buttonColor, 20%);
+}
+
+.dark-mode .por-text h3,
+.dark-mode .por-text p,
+.dark-mode .por-skills {
+  color: $textColorDark;
+}

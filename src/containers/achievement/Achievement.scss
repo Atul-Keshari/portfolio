@@ -1,0 +1,80 @@
+@import "../../_globalColor";
+
+.achievement-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.achievement-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.achievement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* 3 per row */
+  gap: 20px;
+  // width: 100%;
+  max-width: 100%;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: $lightBackground1;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.achievement-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-icon {
+  font-size: 1.8rem;
+  color: $buttonColor;
+  margin-right: 15px;
+}
+
+.achievement-text h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $textColor;
+  margin-bottom: 3px;
+}
+
+.achievement-text p {
+  font-size: 0.95rem;
+  color: $cardSubtitle;
+}
+
+.dark-mode .achievement-item {
+  background: $darkBackground;
+  box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .achievement-item:hover {
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.dark-mode .achievement-icon {
+  color: lighten($buttonColor, 20%);
+}
+
+.dark-mode .achievement-text h3,
+.dark-mode .achievement-text p {
+  color: $textColorDark;
+}
+.dark-mode .heading{
+  font-size: 47px;
+  font-weight: 400;
+  width: auto;
+}
+.heading{
+  font-size: 47px;
+  font-weight: 400;
+}
